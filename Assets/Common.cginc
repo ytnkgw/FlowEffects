@@ -17,7 +17,7 @@ half2 StereoProjection(half3 n)
 
 half3 StereoInverseProjection(half2 p)
 {
-	float d = 2 / (dot(p.xy, p.yx) + 1);
+	float d = 2 / (dot(p.xy, p.yx) + 1); // distance
 	return float3(p.xy * d, 1 - d);
 }
 

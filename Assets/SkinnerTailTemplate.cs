@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,8 +23,8 @@ namespace Skinner
         // How many trail lines in the effect.
         public int lineCount
         {
-            // Q :: what is "0xffff"
-            get { return 0xffff / (2 * _historyLength); }
+            // Q :: what is "0xffff" 
+            get { return 0xffff / (2 * _historyLength); } // int.max
         }
 
         // Template mesh object.

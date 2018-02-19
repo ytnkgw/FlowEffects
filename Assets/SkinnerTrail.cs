@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -215,7 +215,10 @@ namespace Skinner
         // Called when this script is loaded or some values are changed through inspector.
         private void OnValidate()
         {
-            // Change values;
+			// Change values;
+			_cutoffSpeed = Mathf.Max(_cutoffSpeed, 0);
+			_speedToWidth = Mathf.Max(_speedToWidth, 0);
+			_maxWidth = Mathf.Max(_maxWidth, 0);
         }
 
         private void LateUpdate()

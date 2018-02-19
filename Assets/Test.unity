@@ -582,10 +582,10 @@ MonoBehaviour:
   _source: {fileID: 283674322}
   _template: {fileID: 11400000, guid: db48df86a1ee7174eb5bce2b6b185703, type: 2}
   _speedLimit: 0.4
-  _drag: 4.21
+  _drag: 5
   _cutoffSpeed: 0
-  _speedToWidth: 0.04
-  _maxWidth: 0.2
+  _speedToWidth: 0.02
+  _maxWidth: 0.05
   _randomSeed: 0
   _kernelShader: {fileID: 4800000, guid: f5baa70298b118d47922a4d37240e214, type: 3}
   _defaultMaterial: {fileID: 2100000, guid: 08331b5db8c3f8944a33c4bef48090b0, type: 2}

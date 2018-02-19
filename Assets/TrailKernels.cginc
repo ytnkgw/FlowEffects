@@ -32,8 +32,9 @@ float4 InitializeOrthnormFragment(v2f_img i) : SV_Target
 
 float4 UpdatePositionFragment(v2f_img i) : SV_Target
 {
+	// Memo : https://docs.unity3d.com/ja/2017.3/Manual/SL-PropertiesInPrograms.html
 	const float texelHeight = _PositionBuffer_TexelSize.y;
-	
+
 	float2 uv = i.uv.xy;
 
 	if (uv.y < texelHeight) 
@@ -65,7 +66,7 @@ float4 UpdateVelocityFragment(v2f_img i) : SV_Target
 	const float texelHeight = _VelocityBuffer_TexelSize.y;
 	
 	// Q :: what is this uv of. maybe target renderTexture.
-	float2 uv = i.uv.xy; 
+	float2 uv = i.uv.xy;
 
 	if (uv.y < texelHeight) 
 	{
