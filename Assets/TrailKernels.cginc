@@ -32,7 +32,7 @@ float4 InitializeOrthnormFragment(v2f_img i) : SV_Target
 
 float4 UpdatePositionFragment(v2f_img i) : SV_Target
 {
-	// Memo : https://docs.unity3d.com/ja/2017.3/Manual/SL-PropertiesInPrograms.html
+	// Memo about "_TexelSize" : https://docs.unity3d.com/ja/2017.3/Manual/SL-PropertiesInPrograms.html
 	const float texelHeight = _PositionBuffer_TexelSize.y;
 
 	float2 uv = i.uv.xy;
@@ -49,11 +49,11 @@ float4 UpdatePositionFragment(v2f_img i) : SV_Target
 		float3 p = tex2D(_PositionBuffer, uv).xyz;
 		float3 v = tex2D(_VelocityBuffer, uv).xyz;
 
-		// Q :: what is this for.
 		// Apply the velocity cap.
 		float lv = max(length(v), 0.001);
 		v = v * min(lv, _SpeedLimit) / lv;
 
+		// Q :: Why update position.
 		// Update position with velocity.
 		p += v * unity_DeltaTime.x;
 

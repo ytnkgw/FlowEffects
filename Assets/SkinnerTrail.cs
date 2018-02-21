@@ -140,7 +140,7 @@ namespace Skinner
 
             if (!_kernel.ready)
             {
-                // Initialize the animatino kernels and buffers.
+                // Initialize the animation kernels and buffers.
                 _kernel.Setup(_source.vertexCount, _template.historyLength);
                 _kernel.material.SetTexture("_SourcePositionBuffer1", _source.positionBuffer);
                 _kernel.material.SetFloat("_RandomSeed", _randomSeed);

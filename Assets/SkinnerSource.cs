@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -196,7 +196,13 @@ namespace Skinner
                     _camera.SetTargetBuffers(_mrt1, _positionBuffer1.depthBuffer);
                 else
                     _camera.SetTargetBuffers(_mrt0, _positionBuffer0.depthBuffer);
-                _camera.RenderWithShader(_replacementShader, "Skinner");
+
+				/* 
+				 * TIPS :: 
+				 * 1. Camera will find objects has shader tag called "Skinned"
+				 * 2. And render those objects with shader has subshader tag called "Skinned"
+				 */
+				_camera.RenderWithShader(_replacementShader, "Skinner");
             }
             else if (_swapFlag)
             {

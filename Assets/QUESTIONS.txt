@@ -1,11 +1,8 @@
 TrailKernels.cginc
-// Q :: what is this uv of. maybe target renderTexture.
-
-SkinnerTailTemplate.cs
-// Q :: what is "0xffff"
-
-TrailKernels.cginc
-// Q :: what is this for.
+Q :: Why update position.
 
 TrailKernels.cginc
 // Q :: I have no idea at all here.
+
+TrailKernels.cginc
+// Q :: what is this uv of. maybe target renderTexture.
