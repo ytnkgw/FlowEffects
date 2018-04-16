@@ -1,8 +1,26 @@
-TrailKernels.cginc
+﻿TrailKernels.cginc
 Q :: Why update position.
 
 TrailKernels.cginc
 // Q :: I have no idea at all here.
 
+SkinnerTrail.cs
+// Q :: What kind of shader it's using here?
+
 TrailKernels.cginc
 // Q :: what is this uv of. maybe target renderTexture.
+→ 描画先じゃないとUV取ってきても意味なくないか? つまり描画先のuv.
+
+
+[第一回Keijiroを倒す会]
+・写経（しゃきょう）
+・なぜComputeShaderではなくSurfaceShaderなのか？
+・UnityDeltaTimeとは？（x = DeltaTime, y = fps）
+・Orthonormのbufferの計算わからん。（そもそも使ってる？）
+・StereoInverseProjection？？(Common.cginc内の行列関数)
+・GPUでのMeshの作り方。
+・TrailSurface.shaderはちゃんと上から実行されてるのか？
+・MeshFilterが明示的にMeshの参照をMeshRendererに渡す必要はあるのか
+・SkinnerTrailのMaterial？？？
+
+[DONE]

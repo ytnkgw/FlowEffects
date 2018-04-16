@@ -28,7 +28,11 @@
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
-		
+
+		// How gpu processes this? maybe TrailMotion.cginc first and then TrailSurface.cginc
+		// → 
+
+		// Q. なぜここでPassを急に書いているのか
 		Pass
 		{
 			Tags { "LightMode" = "MotionVectors" }

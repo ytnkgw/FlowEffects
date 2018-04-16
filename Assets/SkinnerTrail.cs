@@ -186,9 +186,12 @@ namespace Skinner
                 _renderer = new RendererAdapter(gameObject, _defaultMaterial);
 
             // Update the custom property block.
+			// DONE :: Q :: What kind of shader it's using here? Maybe TrailSurface.cginc.
+			// → SetPropertyBlockでDefaultMaterialを付加している
             var block = _renderer.propertyBlock;
             block.SetTexture("_PreviousPositionBuffer", _kernel.GetWorkingBuffer(Buffers.Position));
-            block.SetTexture("_PreviousVelocityBuffer", _kernel.GetWorkingBuffer(Buffers.Velocity));
+			// Q :: There is no "_PreviousVelocityBuffer" in TrailSurface.cginc file.
+			block.SetTexture("_PreviousVelocityBuffer", _kernel.GetWorkingBuffer(Buffers.Velocity));
             block.SetTexture("_PreviousOrthnormBuffer", _kernel.GetWorkingBuffer(Buffers.Orthnorm));
             block.SetTexture("_PositionBuffer", _kernel.GetLastBuffer(Buffers.Position));
             block.SetTexture("_VelocityBuffer", _kernel.GetLastBuffer(Buffers.Velocity));

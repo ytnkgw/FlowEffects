@@ -25,7 +25,7 @@ void vert(inout appdata_full data)
 {
 	float id = data.vertex.x;
 
-	// fetch samples from the animation kernels
+	// fetch samples from the animation kernels.
 	float4 texcoord = float4(data.vertex.xy, 0, 0);
 	float3 P = tex2Dlod(_PositionBuffer, texcoord).xyz;
 	float3 V = tex2Dlod(_VelocityBuffer, texcoord).xyz;
@@ -35,7 +35,7 @@ void vert(inout appdata_full data)
 	half3 normal = StereoInverseProjection(B.xy);
 	half3 binormal = StereoInverseProjection(B.zw);
 
-	// Attribute modifiers
+	// Attribute modifiers.
 	half speed = length(V);
 
 	half width = _LineWidth.x * data.vertex.z * (1 - data.vertex.y);

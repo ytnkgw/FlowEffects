@@ -52,6 +52,7 @@ namespace Skinner
             for (var line = 0; line < lcount; line++)
             {
                 var u = (line + 0.5f) / lcount;
+
                 for (var seg = 0; seg < _historyLength; seg++)
                 {
                     var v = (seg + 0.5f) / _historyLength;

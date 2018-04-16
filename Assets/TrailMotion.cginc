@@ -1,3 +1,6 @@
+/*
+ここでtemplate meshを変形させている
+*/
 #include "Common.cginc"
 
 float4x4 _NonJitteredVP;

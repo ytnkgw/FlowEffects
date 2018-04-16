@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -124,7 +124,9 @@ namespace Skinner
 
         public void Invoke(KernelEnum kernel, BufferEnum buffer)
         {
-            Graphics.Blit(null, GetWorkingBuffer(buffer), _material, _getKernelIndex(kernel));
+			// Blit(Texture source, RenderTexture target, Material mat, int pass = -1);
+			// 詳細 : https://docs.unity3d.com/ja/530/ScriptReference/Graphics.Blit.html
+			Graphics.Blit(null, GetWorkingBuffer(buffer), _material, _getKernelIndex(kernel));
         }
 
         public void SwapBuffers()
